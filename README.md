@@ -94,7 +94,7 @@ python app.py
 **Shivam Baheti**
 
 LinkedIn:
-[](https://www.linkedin.com/in/shivam-baheti-630a26325)
+https://www.linkedin.com/in/shivam-baheti-630a26325
 
 GitHub:
 https://github.com/ShivamBaheti
