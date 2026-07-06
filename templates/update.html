@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Car</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+<div class="container">
+
+<h2>Update Price</h2>
+
+<p><b>Car:</b> {{ car[1] }}</p>
+
+<form method="POST" class="form-box">
+    <input type="number" name="price" value="{{ car[2] }}" required>
+    <button type="submit">Update</button>
+</form>
+
+<a href="/" class="back-btn">⬅ Back</a>
+
+</div>
+</body>
+</html>

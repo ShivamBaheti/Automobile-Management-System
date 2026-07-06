@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Automobile Database</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+<div class="container">
+
+<h1>🚗 Automobile Database</h1>
+
+<div class="top-bar">
+    <a href="/add" class="btn">➕ Add New Car</a>
+
+    <form action="/search" method="get" class="search-form">
+        <input type="text" name="q" placeholder="Search by make">
+        <button type="submit">Search</button>
+    </form>
+</div>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Make</th>
+        <th>Price</th>
+        <th>City MPG</th>
+        <th>Actions</th>
+    </tr>
+
+    {% for car in cars %}
+    <tr>
+        <td>{{ car[0] }}</td>
+        <td>{{ car[1] }}</td>
+        <td>{{ car[2] }}</td>
+        <td>{{ car[3] }}</td>
+        <td>
+            <a href="/update/{{ car[0] }}" class="edit-btn">✏ Update</a>
+            <a href="/delete/{{ car[0] }}" class="delete-btn">🗑 Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+</div>
+</body>
+</html>
